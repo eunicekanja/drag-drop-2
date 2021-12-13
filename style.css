@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+body{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+.head{
+    background: url('images/bg-desktop-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+h2{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+.todoInput{
+    text-align: center;
+    padding: 5px 0;
+    margin: 1rem 0;
+    font-size: 16px;
+    font-family: inter,sans-serif;
+    border: 1px solid teal;
+}
+.todoInput:focus{
+    outline: none;
+}
+.add-btn{
+    background-color: teal;
+    padding: 9px 9px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+.todo-list{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+.item{
+    display: flex;
+    padding:0.6rem 1rem;
+    border: 1px solid teal;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.item:first-child{
+    border-radius: 5px 5px 0 0;
+}
+.item:last-child{
+    border-radius: 0 0 5px 5px;
+}
+.draggable{
+    display: flex;
+}
+.text{
+    padding: 0 1rem;
+}
+.trash{
+    display: flex;
+    justify-content: center;
+    text-align:center ;
+    align-items: center;
+    display: none;
+}
+.trash-btn{
+    border: none;
+    cursor: pointer;
+}
+.trash-btn .fas{
+    font-size: 1.1rem;
+}
+.trash-btn:active{
+    color: red;
+    transform: scale(0.98);
+}
+.lineThrough{
+    text-decoration: line-through;
+    opacity: 0.6;
+}

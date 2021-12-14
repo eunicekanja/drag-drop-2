@@ -70,7 +70,7 @@ function dragDrop(){
     swap(dragStartIndex,dragEndIndex);
 }
 function trashDrop(dragStart){
-    ListItems.removeChild(ListItems[dragStart])
+    listItems.removeChild(ListItems[dragStart])
      console.log('fuck')
 }
 

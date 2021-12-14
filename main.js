@@ -86,8 +86,9 @@ function DragDrop(){
         item.addEventListener('dragleave',dragLeave);
         item.addEventListener('drop',dragDrop);
     }) 
+    trashBtn.addEventListener('drop',trashDrop(dragStartIndex))
 }
-trashBtn.addEventListener('drop',trashDrop(dragStartIndex))
+
 function swap(startIndex,endIndex){
     const itemOne=ListItems[startIndex].querySelector('.text');
     const itemTwo=ListItems[endIndex].querySelector('.text');

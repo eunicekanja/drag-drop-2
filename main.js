@@ -68,14 +68,9 @@ function dragDrop(){
     const dragEndIndex=+this.getAttribute('data-id');
     deleteItem=this.getAttribute('trash')
     swap(dragStartIndex,dragEndIndex);
-    trashDrop(dragStartIndex)
-    console.log(deleteItem)
 }
 function trashDrop(dragStart){
-     if(deleteItem){
-         ListItems[dragStart].classList.display='none'
-         console.log('yay')
-     }
+    ListItems.removeChild(ListItems[dragStart])
      console.log('fuck')
 }
 
@@ -92,7 +87,7 @@ function DragDrop(){
         item.addEventListener('drop',dragDrop);
     }) 
 }
-
+trashBtn.addEventListener('drop',trashDrop(dragStartIndex))
 function swap(startIndex,endIndex){
     const itemOne=ListItems[startIndex].querySelector('.text');
     const itemTwo=ListItems[endIndex].querySelector('.text');
